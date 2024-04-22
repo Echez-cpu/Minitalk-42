@@ -1,16 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   client.c                                           :+:      :+:    :+:   */
+/*   client_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pokpalae <pokpalae@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/15 13:46:46 by pokpalae          #+#    #+#             */
-/*   Updated: 2024/04/22 11:31:59 by pokpalae         ###   ########.fr       */
+/*   Created: 2024/04/18 13:53:49 by pokpalae          #+#    #+#             */
+/*   Updated: 2024/04/22 17:39:36 by pokpalae         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/minitalk.h"
+#include "../includes/minitalk_bonus.h"
+
+static void	signl_confirm(int signl)
+{
+	if (signl == SIGUSR1)
+		ft_printf("Message received\n");
+	else
+		ft_printf("signal received from pat (server_bonus)\n");
+}
 
 void	publish_bits(pid_t pid, char c)
 {
@@ -58,6 +66,8 @@ int	main(int argc, char **argv)
 		message = argv[2];
 		while (*message != '\0')
 		{
+			signal(SIGUSR1, signl_confirm);
+			signal(SIGUSR2, signl_confirm);
 			publish_bits(pid, *message);
 			message++;
 		}
