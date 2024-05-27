@@ -11,13 +11,25 @@ While this project has the reputation of being "easy", it was intimidating to me
 What gave me the 💡 moment, was the metaphor of using the SIGUSR1 and SIGUSR2 signals to communicate between the clients and servers like you would with Morse code.
 Keep an eye out for the "🔑Key" words, that will imply significance for coding our program.
 We will be completing both the Mandatory and Bonus parts. Here is the outline:
+
 Step 1: Learn UNIX signals
+
 Step 2: Understand SIGUSR1 and SIGUSR2 signals
+
 Step 3: Learn the functions permitted for use
+
 Step 4: Understand the Minitalk assignment and concepts
+
+
 Step 5: Write the structure of directories and files
+
+
 Step 6: Code Minitalk
+
+
 Step 7: Test Minitalk
+
+
 Step 8: Evaluation checklist
 
 
