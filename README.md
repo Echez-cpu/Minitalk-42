@@ -39,11 +39,17 @@ Step 8: Evaluation checklist
 🔷 The Mandatory Part:
 We must create a communication program in the form of a client and a server.
 
+
 The server must be started first. After its launch, it has to print its PID.
+
 The client takes two parameters:
+
 The server PID.
+
 The string to send.
+
 The client must send the string passed as a parameter to the server.
+
 
 Once the string has been received, the server must print it.
 
@@ -60,6 +66,8 @@ we can only use these two signals: SIGUSR1 and SIGUSR2.
 🔷 The Bonus Part:
 The server acknowledges every message received by sending back a signal to the client.
 Unicode characters are supported by both the client and server.
+
+
 🔷 Step 1: Learn UNIX signals
 🔹 UNIX Signals:
 
@@ -82,6 +90,8 @@ SIGUSR1 (10)
 SIGUSR2 (12)
 SIGINT (2)
 SIGTERM (15), and so on.
+
+
 🔹 Signal Handling in a Client-Server Program:
 
 In C, we can set up signal handlers using the signal() function or the more sophisticated sigaction() function.
@@ -133,6 +143,9 @@ These signals are provided for application-specific purposes and are not assigne
 For intstance, they can be used to trigger custom actions in a program when specific events occur.
 Both SIGUSR1 User-defined Signal 1 and SIGUSR2 User-defined Signal 2 provide a way for applications to communicate with their processes in a customized manner.
 When sending or receiving these signals, you can use the kill system call or the kill command in the terminal, passing the appropriate signal number and the process ID (PID) of the target process.
+
+
+
 🔷 Step 3: Learn the functions permitted for use
 signal
 sigemptyset
